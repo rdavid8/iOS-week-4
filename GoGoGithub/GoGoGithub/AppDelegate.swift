@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         GithubOAuth.shared.tokenRequestWithCallbackURL(url, options: SaveOptions.Keychain) { (success) -> () in
             if success {
              print("received Token!")
-          
             
             }
         }

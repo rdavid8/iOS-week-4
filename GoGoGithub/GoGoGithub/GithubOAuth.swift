@@ -149,8 +149,7 @@ class GithubOAuth
             (kSecClass as String) : kSecClassGenericPassword,
             (kSecAttrService as String) : query,
             (kSecAttrAccount as String) : query,
-            (kSecAttrAccessible as String) : [kSecAttrAccessibleAfterFirstUnlock]
-        ]
+            (kSecAttrAccessible as String) : kSecAttrAccessibleAfterFirstUnlock]
     }
 }
 
