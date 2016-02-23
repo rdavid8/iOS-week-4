@@ -11,9 +11,11 @@ import UIKit
 class Repository
 {
     let name: String
+    let owner: Owner
     
-    init(name: String)
+    init(name: String, owner: Owner)
     {
         self.name = name
+        self.owner = owner
     }
 }

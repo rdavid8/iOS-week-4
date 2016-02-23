@@ -16,8 +16,23 @@ extension Repository
             var repositories = [Repository]()
             
             for eachRepository in json {
+                guard let ownerDictionary = eachRepository["owner"] as? [String : AnyObject] else { return }
+                let reposUrl = ownerDictionary["repos_url"] as? String ?? kEmptyString
+                let login = ownerDictionary["login"] as? String ?? kEmptyString
+                let owner = Owner(reposUrl: reposUrl, name: login)
+                
                 let name = eachRepository["name"] as? String ?? kEmptyString
-                repositories.append(Repository(name: name))
+                
+                let repo = Repository(name: name, owner: owner)
+                
+                repositories.append(repo)
+                
+                // 1. Get owner dictionary from eachRepository
+                // 2. Get reposUrl and login from owner dicitonary
+                // 3. Instantiate your owner object
+                // 4. Instantiate your repository object and pass in your owner
+                // 5. APpend to array of repos.
+                
             }
             
             NSOperationQueue.mainQueue().addOperationWithBlock { completion(success: true, repositories: repositories) }
@@ -27,5 +42,7 @@ extension Repository
     func description() -> String
     {
         return self.name
+        
     }
 }
+

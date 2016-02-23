@@ -10,10 +10,12 @@ import UIKit
 
 class Owner
 {
-    let owner: String
+    let name: String
+    let reposUrl: String
     
-    init(owner: String)
+    init(reposUrl: String, name: String)
     {
-        self.owner = owner
+        self.reposUrl = reposUrl
+        self.name = name
     }
 }

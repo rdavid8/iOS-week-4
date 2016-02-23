@@ -18,5 +18,6 @@ class GGButton: UIButton, Setup
     func setup()
     {
         self.layer.cornerRadius = 6.0
+        
     }
 }

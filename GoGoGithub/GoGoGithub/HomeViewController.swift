@@ -30,6 +30,7 @@ class HomeViewController: UIViewController, Identity
         Repository.update { (success, repositories) -> () in
             for repo in repositories {
                 print(repo.name)
+                print(repo.owner.name)
                 
             }
         }
