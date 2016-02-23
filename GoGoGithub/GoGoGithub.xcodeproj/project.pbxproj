@@ -13,6 +13,7 @@
 		AFFC2C531C7B9C40003ADE9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFFC2C521C7B9C40003ADE9B /* Assets.xcassets */; };
 		AFFC2C561C7B9C40003ADE9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFC2C541C7B9C40003ADE9B /* LaunchScreen.storyboard */; };
 		AFFC2C611C7B9C40003ADE9B /* GoGoGithubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFC2C601C7B9C40003ADE9B /* GoGoGithubTests.swift */; };
+		AFFC2C6C1C7B9DB7003ADE9B /* GithubOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFC2C6B1C7B9DB7003ADE9B /* GithubOAuth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		AFFC2C5C1C7B9C40003ADE9B /* GoGoGithubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoGoGithubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFC2C601C7B9C40003ADE9B /* GoGoGithubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoGoGithubTests.swift; sourceTree = "<group>"; };
 		AFFC2C621C7B9C40003ADE9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFFC2C6B1C7B9DB7003ADE9B /* GithubOAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubOAuth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				AFFC2C4B1C7B9C40003ADE9B /* AppDelegate.swift */,
-				AFFC2C4D1C7B9C40003ADE9B /* ViewController.swift */,
 				AFFC2C4F1C7B9C40003ADE9B /* Main.storyboard */,
+				AFFC2C6E1C7BA4D3003ADE9B /* Controllers */,
+				AFFC2C6D1C7B9DBA003ADE9B /* API */,
 				AFFC2C521C7B9C40003ADE9B /* Assets.xcassets */,
 				AFFC2C541C7B9C40003ADE9B /* LaunchScreen.storyboard */,
 				AFFC2C571C7B9C40003ADE9B /* Info.plist */,
@@ -94,6 +97,22 @@
 				AFFC2C621C7B9C40003ADE9B /* Info.plist */,
 			);
 			path = GoGoGithubTests;
+			sourceTree = "<group>";
+		};
+		AFFC2C6D1C7B9DBA003ADE9B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AFFC2C6B1C7B9DB7003ADE9B /* GithubOAuth.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		AFFC2C6E1C7BA4D3003ADE9B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFFC2C4D1C7B9C40003ADE9B /* ViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +218,7 @@
 			files = (
 				AFFC2C4E1C7B9C40003ADE9B /* ViewController.swift in Sources */,
 				AFFC2C4C1C7B9C40003ADE9B /* AppDelegate.swift in Sources */,
+				AFFC2C6C1C7B9DB7003ADE9B /* GithubOAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +408,7 @@
 				AFFC2C671C7B9C40003ADE9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFFC2C681C7B9C40003ADE9B /* Build configuration list for PBXNativeTarget "GoGoGithubTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +417,7 @@
 				AFFC2C6A1C7B9C40003ADE9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -20,6 +20,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func authorizeButton(sender: UIButton)
+    {
+        GithubOAuth.shared.oAuthRequestWithScope("email,user,repo")
+    }
 
+    @IBAction func printTokenButton(sender: UIButton)
+    {
+        do{
+            let token = try GithubOAuth.shared.accessToken()
+            print(token)
+        } catch _ {}
+    }
 }
 
