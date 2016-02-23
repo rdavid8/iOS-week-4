@@ -14,7 +14,7 @@ func middleOfArray(array: [Int]) -> [Int]
     return [array[beginning], array[middle], array[end]]
 }
 
-var demoArray = [5, 10, 15, 20, 25]
+var demoArray = [5, 10, 15, 20, 25, 30, 35]
 
 middleOfArray(demoArray)
 
