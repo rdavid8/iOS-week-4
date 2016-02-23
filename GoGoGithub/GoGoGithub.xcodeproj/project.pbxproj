@@ -7,8 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AFC9C5471C7CE9E200CDF78F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C5461C7CE9E200CDF78F /* HomeViewController.swift */; };
+		AFC9C5491C7CEA0D00CDF78F /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C5481C7CEA0D00CDF78F /* Identity.swift */; };
+		AFC9C54F1C7CEF3000CDF78F /* GGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C54E1C7CEF3000CDF78F /* GGButton.swift */; };
+		AFC9C5511C7CF11C00CDF78F /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C5501C7CF11C00CDF78F /* Setup.swift */; };
+		AFC9C5531C7CFC8C00CDF78F /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C5521C7CFC8C00CDF78F /* APIRequest.swift */; };
+		AFC9C5551C7D039D00CDF78F /* GETRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C5541C7D039D00CDF78F /* GETRepositoriesRequest.swift */; };
+		AFC9C5571C7D04F200CDF78F /* Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C5561C7D04F200CDF78F /* Additions.swift */; };
+		AFC9C5591C7D0B4A00CDF78F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C5581C7D0B4A00CDF78F /* API.swift */; };
+		AFC9C55B1C7D110100CDF78F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C55A1C7D110100CDF78F /* Repository.swift */; };
+		AFC9C55E1C7D118F00CDF78F /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C55D1C7D118F00CDF78F /* Owner.swift */; };
+		AFC9C5601C7D141900CDF78F /* ModelAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C55F1C7D141900CDF78F /* ModelAdditions.swift */; };
 		AFFC2C4C1C7B9C40003ADE9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFC2C4B1C7B9C40003ADE9B /* AppDelegate.swift */; };
-		AFFC2C4E1C7B9C40003ADE9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFC2C4D1C7B9C40003ADE9B /* ViewController.swift */; };
+		AFFC2C4E1C7B9C40003ADE9B /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFC2C4D1C7B9C40003ADE9B /* OAuthViewController.swift */; };
 		AFFC2C511C7B9C40003ADE9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFC2C4F1C7B9C40003ADE9B /* Main.storyboard */; };
 		AFFC2C531C7B9C40003ADE9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFFC2C521C7B9C40003ADE9B /* Assets.xcassets */; };
 		AFFC2C561C7B9C40003ADE9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFC2C541C7B9C40003ADE9B /* LaunchScreen.storyboard */; };
@@ -27,9 +38,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AFC9C5461C7CE9E200CDF78F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AFC9C5481C7CEA0D00CDF78F /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
+		AFC9C54E1C7CEF3000CDF78F /* GGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GGButton.swift; path = ../GGButton.swift; sourceTree = "<group>"; };
+		AFC9C5501C7CF11C00CDF78F /* Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
+		AFC9C5521C7CFC8C00CDF78F /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		AFC9C5541C7D039D00CDF78F /* GETRepositoriesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GETRepositoriesRequest.swift; sourceTree = "<group>"; };
+		AFC9C5561C7D04F200CDF78F /* Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Additions.swift; sourceTree = "<group>"; };
+		AFC9C5581C7D0B4A00CDF78F /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		AFC9C55A1C7D110100CDF78F /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		AFC9C55D1C7D118F00CDF78F /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		AFC9C55F1C7D141900CDF78F /* ModelAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelAdditions.swift; sourceTree = "<group>"; };
 		AFFC2C481C7B9C40003ADE9B /* GoGoGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFC2C4B1C7B9C40003ADE9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFFC2C4D1C7B9C40003ADE9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFFC2C4D1C7B9C40003ADE9B /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		AFFC2C501C7B9C40003ADE9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFFC2C521C7B9C40003ADE9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFFC2C551C7B9C40003ADE9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,12 +80,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AFC9C54A1C7CEA1600CDF78F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AFC9C5481C7CEA0D00CDF78F /* Identity.swift */,
+				AFC9C5501C7CF11C00CDF78F /* Setup.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		AFC9C54D1C7CEEE000CDF78F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFFC2C4F1C7B9C40003ADE9B /* Main.storyboard */,
+				AFC9C54E1C7CEF3000CDF78F /* GGButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AFC9C55C1C7D110600CDF78F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFC9C55A1C7D110100CDF78F /* Repository.swift */,
+				AFC9C55F1C7D141900CDF78F /* ModelAdditions.swift */,
+				AFC9C55D1C7D118F00CDF78F /* Owner.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		AFFC2C3F1C7B9C40003ADE9B = {
 			isa = PBXGroup;
 			children = (
 				AFFC2C4A1C7B9C40003ADE9B /* GoGoGithub */,
 				AFFC2C5F1C7B9C40003ADE9B /* GoGoGithubTests */,
 				AFFC2C491C7B9C40003ADE9B /* Products */,
+				AFC9C55C1C7D110600CDF78F /* Model */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,7 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				AFFC2C4B1C7B9C40003ADE9B /* AppDelegate.swift */,
-				AFFC2C4F1C7B9C40003ADE9B /* Main.storyboard */,
+				AFC9C5561C7D04F200CDF78F /* Additions.swift */,
+				AFC9C54D1C7CEEE000CDF78F /* View */,
+				AFC9C54A1C7CEA1600CDF78F /* Protocols */,
 				AFFC2C6E1C7BA4D3003ADE9B /* Controllers */,
 				AFFC2C6D1C7B9DBA003ADE9B /* API */,
 				AFFC2C521C7B9C40003ADE9B /* Assets.xcassets */,
@@ -103,6 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				AFFC2C6B1C7B9DB7003ADE9B /* GithubOAuth.swift */,
+				AFC9C5521C7CFC8C00CDF78F /* APIRequest.swift */,
+				AFC9C5581C7D0B4A00CDF78F /* API.swift */,
+				AFC9C5541C7D039D00CDF78F /* GETRepositoriesRequest.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -110,7 +166,8 @@
 		AFFC2C6E1C7BA4D3003ADE9B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AFFC2C4D1C7B9C40003ADE9B /* ViewController.swift */,
+				AFC9C5461C7CE9E200CDF78F /* HomeViewController.swift */,
+				AFFC2C4D1C7B9C40003ADE9B /* OAuthViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -216,9 +273,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFFC2C4E1C7B9C40003ADE9B /* ViewController.swift in Sources */,
+				AFC9C55E1C7D118F00CDF78F /* Owner.swift in Sources */,
+				AFC9C5591C7D0B4A00CDF78F /* API.swift in Sources */,
+				AFFC2C4E1C7B9C40003ADE9B /* OAuthViewController.swift in Sources */,
+				AFC9C5571C7D04F200CDF78F /* Additions.swift in Sources */,
 				AFFC2C4C1C7B9C40003ADE9B /* AppDelegate.swift in Sources */,
+				AFC9C5551C7D039D00CDF78F /* GETRepositoriesRequest.swift in Sources */,
+				AFC9C5491C7CEA0D00CDF78F /* Identity.swift in Sources */,
 				AFFC2C6C1C7B9DB7003ADE9B /* GithubOAuth.swift in Sources */,
+				AFC9C5471C7CE9E200CDF78F /* HomeViewController.swift in Sources */,
+				AFC9C5511C7CF11C00CDF78F /* Setup.swift in Sources */,
+				AFC9C5531C7CFC8C00CDF78F /* APIRequest.swift in Sources */,
+				AFC9C54F1C7CEF3000CDF78F /* GGButton.swift in Sources */,
+				AFC9C55B1C7D110100CDF78F /* Repository.swift in Sources */,
+				AFC9C5601C7D141900CDF78F /* ModelAdditions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

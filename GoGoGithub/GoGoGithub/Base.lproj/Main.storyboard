@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Eto-zK-1QI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Auth View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoGoGithub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OAuthViewController" id="BYZ-38-t0r" customClass="OAuthViewController" customModule="GoGoGithub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,27 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9X-3v-7m9">
-                                <rect key="frame" x="267" y="265" width="66" height="30"/>
-                                <state key="normal" title="Authorize"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9X-3v-7m9" customClass="GGButton" customModule="GoGoGithub" customModuleProvider="target">
+                                <rect key="frame" x="200" y="541" width="200" height="45"/>
+                                <color key="backgroundColor" red="0.84119668967839945" green="0.97927317777660638" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="N7r-dV-by5"/>
+                                    <constraint firstAttribute="height" constant="45" id="cIk-lv-TEW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="authorizeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PCX-5j-QJG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77m-58-EcV">
-                                <rect key="frame" x="261" y="523" width="78" height="30"/>
-                                <state key="normal" title="Print Token"/>
-                                <connections>
-                                    <action selector="printTokenButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ULz-Ox-Mvv"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Octocat" translatesAutoresizingMaskIntoConstraints="NO" id="qyP-Sn-vUi">
+                                <rect key="frame" x="180" y="138" width="240" height="200"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="77m-58-EcV" secondAttribute="bottom" constant="47" id="0iN-EQ-PJS"/>
-                            <constraint firstItem="V9X-3v-7m9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Len-Xl-L4K"/>
-                            <constraint firstItem="77m-58-EcV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bkf-L9-zUY"/>
-                            <constraint firstItem="V9X-3v-7m9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p6i-FP-b6D"/>
+                            <constraint firstItem="qyP-Sn-vUi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HSa-pl-AB6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V9X-3v-7m9" secondAttribute="bottom" constant="14" id="KU3-s4-iMe"/>
+                            <constraint firstItem="qyP-Sn-vUi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-62" id="frn-6j-vOX"/>
+                            <constraint firstItem="V9X-3v-7m9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oFg-YT-keF"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -45,5 +47,39 @@
             </objects>
             <point key="canvasLocation" x="410" y="265"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="BxY-ct-U25">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Eto-zK-1QI" customClass="HomeViewController" customModule="GoGoGithub" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ptb-BW-I5K"/>
+                        <viewControllerLayoutGuide type="bottom" id="U5D-hg-q5U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ml8-QP-t7g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gk4-xn-0WM">
+                                <rect key="frame" x="239" y="285" width="122" height="30"/>
+                                <state key="normal" title="Print Repositories"/>
+                                <connections>
+                                    <action selector="printRepositoryButton:" destination="Eto-zK-1QI" eventType="touchUpInside" id="3Rx-fj-4bq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gk4-xn-0WM" firstAttribute="centerX" secondItem="Ml8-QP-t7g" secondAttribute="centerX" id="7Qb-p6-X6D"/>
+                            <constraint firstItem="gk4-xn-0WM" firstAttribute="centerY" secondItem="Ml8-QP-t7g" secondAttribute="centerY" id="8BF-ob-aS6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9N2-t4-w1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279" y="265"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Octocat" width="240" height="200"/>
+    </resources>
 </document>

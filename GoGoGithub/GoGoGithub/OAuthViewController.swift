@@ -8,16 +8,28 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class OAuthViewController: UIViewController, Identity
+{
 
+    class func id() -> String
+    {
+        return "OAuthViewController"
+    }
+    
+    override func prefersStatusBarHidden() -> Bool
+    {
+        return true
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+       
     }
 
     @IBAction func authorizeButton(sender: UIButton)
@@ -25,12 +37,6 @@ class ViewController: UIViewController {
         GithubOAuth.shared.oAuthRequestWithScope("email,user,repo")
     }
 
-    @IBAction func printTokenButton(sender: UIButton)
-    {
-        do{
-            let token = try GithubOAuth.shared.accessToken()
-            print(token)
-        } catch _ {}
-    }
+
 }
 

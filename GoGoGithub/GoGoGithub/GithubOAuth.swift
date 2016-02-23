@@ -69,18 +69,35 @@ class GithubOAuth
                         })
                     }
                     
-                } catch _ { completion(success: false) }
+                    self.mainQCallback(completion: completion)
+                    
+                } catch _ { self.mainQCallback(false, completion: completion) }
                 
-            } else {completion(success: false)}
+            } else {self.mainQCallback(completion: completion)}
             
             }.resume()
+    }
+    
+    func mainQCallback(success: Bool = true, completion: GithubOAuthCompletion)
+    {
+        NSOperationQueue.mainQueue().addOperationWithBlock { completion(success: true) }
     }
 
     func accessToken() throws -> String
     {
         var accessToken: String?
-        if let token = self.accessTokenFromKeychain() { accessToken = token }
-        if let token = self.accessTokenFromUserDefaults() { accessToken = token }
+        
+        if let token = self.accessTokenFromKeychain() {
+            print(token)
+            
+            accessToken = token
+        }
+        
+        if let token = self.accessTokenFromUserDefaults() {
+            print(token)
+            
+            accessToken = token
+        }
         
         guard let token = accessToken else {
             throw GithubError.MissingAccessToken("You dont have access token saved") }
@@ -92,7 +109,7 @@ class GithubOAuth
     
     private func accessTokenFromUserDefaults() -> String?
     {
-     return NSUserDefaults.standardUserDefaults().stringForKey(kAccessTokenKey)
+        return NSUserDefaults.standardUserDefaults().stringForKey(kAccessTokenKey)
     }
     
     private func requestWith(url: NSURL, method: String) -> NSMutableURLRequest
@@ -106,7 +123,6 @@ class GithubOAuth
     private func accessTokenFrom(json: [String: AnyObject?]) -> String?
     {
         guard let token = json["access_token"] as? String else { return nil }
-        print(token)
         return token
     }
     
@@ -132,7 +148,7 @@ class GithubOAuth
             }
 
         }
-          return kEmptyString
+          return nil
     }
     
     private func saveAccessTokenToKeychain(token: String) -> Bool
