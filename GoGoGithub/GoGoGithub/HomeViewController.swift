@@ -24,6 +24,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, Identity
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.updateTableView()
         self.setUpTableView()
     }
     
@@ -43,13 +44,29 @@ class HomeViewController: UIViewController, UITableViewDataSource, Identity
         self.repositoriesView.rowHeight = UITableViewAutomaticDimension
     }
     
+    func updateTableView() {
+        Repository.update { (success, respositories) -> () in
+            if success {
+                self.datasource = respositories
+                print("count\(self.datasource.count)")
+            }
+        }
+    }
+            func updateOwner() {
+                Owner.update { (success, user) -> () in
+                    if success{
+                        print(user.name)
+                    }
+            }
+            }
+    
+    
     func getRepo()
     {
     Repository.update { (success, repositories) -> () in
         if success {
         self.datasource = repositories
-//        for repo in repositories {
-//            }
+        
         }
     }
 }

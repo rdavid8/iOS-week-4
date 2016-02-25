@@ -12,10 +12,15 @@ class Owner
 {
     let name: String
     let reposUrl: String
+    let location: String
+    let image: String?
     
-    init(reposUrl: String, name: String)
+    
+    init(name: String, reposUrl: String, location: String, image: String? = nil)
     {
-        self.reposUrl = reposUrl
         self.name = name
+        self.reposUrl = reposUrl
+        self.location = location
+        self.image = image
     }
 }

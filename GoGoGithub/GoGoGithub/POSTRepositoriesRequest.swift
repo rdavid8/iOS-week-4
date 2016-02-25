@@ -12,9 +12,17 @@ class POSTRepositoriesRequest: APIRequest
 {
     var httpMethod = HTTPMethod.POST
     var headerContentType = MIMEType.ApplicationJSON
+    var name: String
     
     func url() -> String {
         return "https://api.github.com/user/repos"
+    }
+    init(name: String) {
+        self.name = name
+    }
+    func httpBody() -> NSData? {
+        let dictionary = ["name" : self.name]
+        return try! NSJSONSerialization.dataWithJSONObject(dictionary, options: .PrettyPrinted)
     }
     
     func queryStringParameters() -> [String : String]?

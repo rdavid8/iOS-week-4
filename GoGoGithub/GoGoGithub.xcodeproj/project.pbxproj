@@ -10,6 +10,9 @@
 		3A65A63B1C7E4F1C008A5120 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65A63A1C7E4F1C008A5120 /* SearchViewController.swift */; };
 		3A65A63D1C7E74DC008A5120 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65A63C1C7E74DC008A5120 /* ProfileViewController.swift */; };
 		3A65A63F1C7E75F5008A5120 /* POSTRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65A63E1C7E75F5008A5120 /* POSTRepositoriesRequest.swift */; };
+		3A65A6411C7E891C008A5120 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65A6401C7E891C008A5120 /* Search.swift */; };
+		3A65A6431C7EC105008A5120 /* AddRepoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65A6421C7EC105008A5120 /* AddRepoController.swift */; };
+		3A65A6451C7EC72D008A5120 /* requestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65A6441C7EC72D008A5120 /* requestUser.swift */; };
 		AFC9C5471C7CE9E200CDF78F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C5461C7CE9E200CDF78F /* HomeViewController.swift */; };
 		AFC9C5491C7CEA0D00CDF78F /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C5481C7CEA0D00CDF78F /* Identity.swift */; };
 		AFC9C54F1C7CEF3000CDF78F /* GGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C54E1C7CEF3000CDF78F /* GGButton.swift */; };
@@ -44,6 +47,9 @@
 		3A65A63A1C7E4F1C008A5120 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3A65A63C1C7E74DC008A5120 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3A65A63E1C7E75F5008A5120 /* POSTRepositoriesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POSTRepositoriesRequest.swift; sourceTree = "<group>"; };
+		3A65A6401C7E891C008A5120 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Search.swift; path = GoGoGithub/Search.swift; sourceTree = "<group>"; };
+		3A65A6421C7EC105008A5120 /* AddRepoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRepoController.swift; sourceTree = "<group>"; };
+		3A65A6441C7EC72D008A5120 /* requestUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = requestUser.swift; sourceTree = "<group>"; };
 		AFC9C5461C7CE9E200CDF78F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AFC9C5481C7CEA0D00CDF78F /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
 		AFC9C54E1C7CEF3000CDF78F /* GGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GGButton.swift; path = ../GGButton.swift; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				AFC9C55A1C7D110100CDF78F /* Repository.swift */,
+				3A65A6401C7E891C008A5120 /* Search.swift */,
 				AFC9C55F1C7D141900CDF78F /* ModelAdditions.swift */,
 				AFC9C55D1C7D118F00CDF78F /* Owner.swift */,
 			);
@@ -163,6 +170,7 @@
 			children = (
 				AFFC2C6B1C7B9DB7003ADE9B /* GithubOAuth.swift */,
 				AFC9C5521C7CFC8C00CDF78F /* APIRequest.swift */,
+				3A65A6441C7EC72D008A5120 /* requestUser.swift */,
 				AFC9C5581C7D0B4A00CDF78F /* API.swift */,
 				AFC9C5541C7D039D00CDF78F /* GETRepositoriesRequest.swift */,
 				3A65A63E1C7E75F5008A5120 /* POSTRepositoriesRequest.swift */,
@@ -177,6 +185,7 @@
 				AFFC2C4D1C7B9C40003ADE9B /* OAuthViewController.swift */,
 				3A65A63C1C7E74DC008A5120 /* ProfileViewController.swift */,
 				3A65A63A1C7E4F1C008A5120 /* SearchViewController.swift */,
+				3A65A6421C7EC105008A5120 /* AddRepoController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -291,8 +300,11 @@
 				3A65A63D1C7E74DC008A5120 /* ProfileViewController.swift in Sources */,
 				AFC9C5551C7D039D00CDF78F /* GETRepositoriesRequest.swift in Sources */,
 				3A65A63F1C7E75F5008A5120 /* POSTRepositoriesRequest.swift in Sources */,
+				3A65A6411C7E891C008A5120 /* Search.swift in Sources */,
 				AFC9C5491C7CEA0D00CDF78F /* Identity.swift in Sources */,
 				AFFC2C6C1C7B9DB7003ADE9B /* GithubOAuth.swift in Sources */,
+				3A65A6451C7EC72D008A5120 /* requestUser.swift in Sources */,
+				3A65A6431C7EC105008A5120 /* AddRepoController.swift in Sources */,
 				AFC9C5471C7CE9E200CDF78F /* HomeViewController.swift in Sources */,
 				AFC9C5511C7CF11C00CDF78F /* Setup.swift in Sources */,
 				AFC9C5531C7CFC8C00CDF78F /* APIRequest.swift in Sources */,

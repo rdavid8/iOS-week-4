@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileViewController: UIViewController, Identity
 {
+    var imageURL = "https://avatars.githubusercontent.com/u/15052381?v=3"
+    
     @IBOutlet weak var imageView: UIImageView!
     var datasource = [Repository]()
     
@@ -25,7 +27,22 @@ class ProfileViewController: UIViewController, Identity
     }
     override func didReceiveMemoryWarning()
     {
-    super.didReceiveMemoryWarning()
+        super.didReceiveMemoryWarning()
     }
-//    var data = NSData(contentsOfURL: NSURL, string: "")
+    
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    
+        override func viewWillAppear(animated: Bool) {
+            super.viewWillAppear(animated)
+        Owner.update { (success, user) -> () in
+//            if success {
+//                 let user = user {
+        self.userLabel.text = user.name
+        self.locationLabel.text = user.location
+            API.getImage(user.image!, completion: { (image) -> () in
+        self.imageView.image = image
+            })
+        }
+    }
 }

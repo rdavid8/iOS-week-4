@@ -17,15 +17,14 @@ extension Repository
             
             for eachRepository in json {
                 
+                
                 let name = eachRepository["name"] as? String ?? kEmptyString
                 guard let ownerDictionary = eachRepository["owner"] as? [String : AnyObject] else { fatalError("Can't retrieve owner") }
                 let reposUrl = ownerDictionary["repos_url"] as? String ?? kEmptyString
                 let login = ownerDictionary["login"] as? String ?? kEmptyString
-                let owner = Owner(reposUrl: reposUrl, name: login)
-                
-                
-                
-                let repo = Repository(name: name, owner: owner)
+                let location = kEmptyString
+                let owner = Owner(name: login, reposUrl: reposUrl, location: location)
+                let repo = Repository(name: name, owner: owner, location: location)
                 
 //                print(repo.name)
 //                print(repo.owner.name)
@@ -44,11 +43,32 @@ extension Repository
             NSOperationQueue.mainQueue().addOperationWithBlock { completion(success: true, repositories: repositories) }
         }
     }
-    
-    func description() -> String
-    {
-        return self.name
+
+    class func ownerJSON(json:[String : AnyObject] ) -> Owner? {
         
+        guard let name = json["login"] as? String else { fatalError("Can't get username")}
+        let id = kEmptyString
+        let location = kEmptyString
+        return Owner(name: name, reposUrl: id, location: location)
+    }
+    func description() -> String {
+        return self.name
     }
 }
-
+extension Owner {
+    
+    class func update(completion: (success: Bool, user: Owner) -> ()) {
+        API.shared.enqueue(requestUser()) { (success, json) -> () in
+            
+            let input = json[0]
+            print(input)
+            
+            let name = input["login"] as? String ?? kEmptyString
+            let reposUrl = input["repos_url"] as? String ?? kEmptyString
+            let location = input["location"] as? String ?? kEmptyString
+            let image = input["avatar_url"] as? String ?? kEmptyString
+            
+            let owner = Owner(name: name, reposUrl: reposUrl, location: location, image: image)
+    }
+}
+}
