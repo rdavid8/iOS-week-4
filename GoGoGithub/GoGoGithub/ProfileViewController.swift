@@ -33,16 +33,18 @@ class ProfileViewController: UIViewController, Identity
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     
-        override func viewWillAppear(animated: Bool) {
-            super.viewWillAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         Owner.update { (success, user) -> () in
-//            if success {
-//                 let user = user {
-        self.userLabel.text = user.name
-        self.locationLabel.text = user.location
-            API.getImage(user.image!, completion: { (image) -> () in
-        self.imageView.image = image
+            print(success)
+            if success {
+                    self.userLabel.text = user.name
+                    self.locationLabel.text = user.location
+                    print(user.image)
+                    API.getImage(user.image!, completion: { (image) -> () in
+                        self.imageView.image = image
             })
         }
     }
+}
 }

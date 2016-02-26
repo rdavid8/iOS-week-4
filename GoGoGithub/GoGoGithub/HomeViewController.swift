@@ -52,24 +52,23 @@ class HomeViewController: UIViewController, UITableViewDataSource, Identity
             }
         }
     }
-            func updateOwner() {
-                Owner.update { (success, user) -> () in
-                    if success{
-                        print(user.name)
-                    }
+    func updateOwner() {
+        Owner.update { (success, user) -> () in
+            if success{
+                print(user.name)
             }
-            }
-    
+        }
+    }
     
     func getRepo()
     {
-    Repository.update { (success, repositories) -> () in
-        if success {
-        self.datasource = repositories
-        
+        Repository.update { (success, repositories) -> () in
+            if success {
+                self.datasource = repositories
+                
+            }
         }
     }
-}
 }
 extension HomeViewController
 {
@@ -91,8 +90,4 @@ extension HomeViewController
     }
 }
 
-
-//                print(repo.name)
-//                print(repo.owner.name)
-//
 

@@ -16,7 +16,7 @@ class Owner
     let image: String?
     
     
-    init(name: String, reposUrl: String, location: String, image: String? = nil)
+    init(name: String, reposUrl: String, location: String, image: String)
     {
         self.name = name
         self.reposUrl = reposUrl

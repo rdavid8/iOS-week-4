@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXN-3n-30q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-783" y="1074"/>
+            <point key="canvasLocation" x="-123" y="2658"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="BxY-ct-U25">
@@ -155,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9N2-t4-w1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-129" y="1074"/>
+            <point key="canvasLocation" x="-989" y="1062"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="itA-r8-1X9">
@@ -172,6 +172,7 @@
                         <segue destination="Eto-zK-1QI" kind="relationship" relationship="viewControllers" id="bHZ-Oo-5Iw"/>
                         <segue destination="ws0-gt-QJw" kind="relationship" relationship="viewControllers" id="Rx9-ak-gYJ"/>
                         <segue destination="gZy-fh-X5B" kind="relationship" relationship="viewControllers" id="vP1-5H-h0L"/>
+                        <segue destination="Pcg-Yo-4fl" kind="relationship" relationship="viewControllers" id="268-S6-Ou7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQQ-jt-FG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -236,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EgA-FW-Gzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="533" y="1074"/>
+            <point key="canvasLocation" x="-279" y="1062"/>
         </scene>
         <!--ProfileViewController-->
         <scene sceneID="hP2-D0-tbG">
@@ -251,7 +252,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imageView" translatesAutoresizingMaskIntoConstraints="NO" id="qpV-Tb-asg">
-                                <rect key="frame" x="180" y="78" width="230" height="230"/>
+                                <rect key="frame" x="185" y="78" width="230" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="FGa-29-Zbd"/>
+                                    <constraint firstAttribute="width" constant="230" id="bZ6-OA-ULA"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFl-td-4xe">
                                 <rect key="frame" x="282" y="316" width="37" height="21"/>
@@ -268,17 +273,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PFl-td-4xe" firstAttribute="top" secondItem="qpV-Tb-asg" secondAttribute="bottom" constant="8" id="Ahp-qM-RFo"/>
-                            <constraint firstItem="nG8-bi-6OD" firstAttribute="top" secondItem="qpV-Tb-asg" secondAttribute="bottom" constant="26" id="DkO-cv-7PL"/>
-                            <constraint firstItem="PFl-td-4xe" firstAttribute="top" secondItem="qpV-Tb-asg" secondAttribute="bottom" constant="8" id="Gsp-Cw-Mjc"/>
-                            <constraint firstItem="PFl-td-4xe" firstAttribute="centerX" secondItem="zZT-t5-2re" secondAttribute="centerX" id="Szv-X0-9Cz"/>
-                            <constraint firstAttribute="trailing" secondItem="qpV-Tb-asg" secondAttribute="trailing" constant="190" id="VCf-NR-Qyj"/>
-                            <constraint firstItem="qpV-Tb-asg" firstAttribute="leading" secondItem="zZT-t5-2re" secondAttribute="leading" constant="180" id="amS-Rr-7Ay"/>
+                            <constraint firstItem="qpV-Tb-asg" firstAttribute="centerX" secondItem="zZT-t5-2re" secondAttribute="centerX" id="1tJ-7F-Son"/>
+                            <constraint firstItem="PFl-td-4xe" firstAttribute="top" secondItem="qpV-Tb-asg" secondAttribute="bottom" constant="8" id="AGq-b9-xWa"/>
+                            <constraint firstItem="nG8-bi-6OD" firstAttribute="centerX" secondItem="PFl-td-4xe" secondAttribute="centerX" id="IU2-ox-fVR"/>
                             <constraint firstItem="9Qe-Re-I6j" firstAttribute="top" secondItem="PFl-td-4xe" secondAttribute="bottom" constant="214" id="cU3-IN-cFt"/>
+                            <constraint firstItem="nG8-bi-6OD" firstAttribute="centerX" secondItem="zZT-t5-2re" secondAttribute="centerX" id="cvW-xj-skp"/>
                             <constraint firstItem="9Qe-Re-I6j" firstAttribute="top" secondItem="nG8-bi-6OD" secondAttribute="bottom" constant="196" id="gna-xK-m5N"/>
-                            <constraint firstItem="nG8-bi-6OD" firstAttribute="centerX" secondItem="zZT-t5-2re" secondAttribute="centerX" id="i7a-RW-lIt"/>
-                            <constraint firstItem="PFl-td-4xe" firstAttribute="top" secondItem="qpV-Tb-asg" secondAttribute="bottom" constant="8" id="p1D-1O-Rwo"/>
                             <constraint firstItem="qpV-Tb-asg" firstAttribute="top" secondItem="xpH-oU-cr0" secondAttribute="bottom" constant="58" id="zXe-XU-bjv"/>
+                            <constraint firstItem="nG8-bi-6OD" firstAttribute="top" secondItem="qpV-Tb-asg" secondAttribute="bottom" constant="26" id="zba-Ax-qfz"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="poT-St-6aO"/>
@@ -290,7 +292,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9pH-AZ-zZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221" y="1074"/>
+            <point key="canvasLocation" x="397" y="1062"/>
+        </scene>
+        <!--CollectionViewController-->
+        <scene sceneID="XaJ-8L-VSw">
+            <objects>
+                <viewController title="CollectionViewController" id="Pcg-Yo-4fl" customClass="CollectionViewController" customModule="GoGoGithub" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KY8-Z4-cyc"/>
+                        <viewControllerLayoutGuide type="bottom" id="yho-wt-kb0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="chd-SC-3T0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="2Y6-HB-nFH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Pcg-Yo-4fl" id="lgl-bp-6sJ"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="collectionCell" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="R5A-5D-CnW">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F27-Ax-ClV">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="userCollectionViewCell" id="ixN-lZ-hXq" customClass="CollectionViewCell" customModule="GoGoGithub" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xc2-je-cRw">
+                                                    <rect key="frame" x="8" y="8" width="70" height="70"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="imageView" destination="xc2-je-cRw" id="4qv-rk-dqu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pcg-Yo-4fl" id="rYn-ks-HuA"/>
+                                    <outlet property="delegate" destination="Pcg-Yo-4fl" id="Jgi-Aj-87I"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Y6-HB-nFH" firstAttribute="leading" secondItem="chd-SC-3T0" secondAttribute="leading" id="HF7-8l-c62"/>
+                            <constraint firstAttribute="trailing" secondItem="2Y6-HB-nFH" secondAttribute="trailing" id="V7f-Bh-bo2"/>
+                            <constraint firstItem="2Y6-HB-nFH" firstAttribute="centerX" secondItem="chd-SC-3T0" secondAttribute="centerX" id="dWY-Us-Tnc"/>
+                            <constraint firstItem="2Y6-HB-nFH" firstAttribute="top" secondItem="chd-SC-3T0" secondAttribute="top" id="jVa-MG-Dac"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="hHe-2H-ErY"/>
+                    <connections>
+                        <outlet property="collectionView" destination="R5A-5D-CnW" id="vZ1-9a-fOy"/>
+                        <outlet property="searchBar" destination="2Y6-HB-nFH" id="Any-eh-tcd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JwM-zc-CdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="1062"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RX3-Nf-6SJ">
@@ -312,7 +384,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZn-t5-qJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1595" y="1074"/>
+            <point key="canvasLocation" x="-123" y="1874"/>
         </scene>
     </scenes>
     <resources>

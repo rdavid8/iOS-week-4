@@ -23,7 +23,9 @@ extension Repository
                 let reposUrl = ownerDictionary["repos_url"] as? String ?? kEmptyString
                 let login = ownerDictionary["login"] as? String ?? kEmptyString
                 let location = kEmptyString
-                let owner = Owner(name: login, reposUrl: reposUrl, location: location)
+                
+                let avatar = ownerDictionary["avatar_url"] as? String ?? kEmptyString
+                let owner = Owner(name: login, reposUrl: reposUrl, location: location, image: avatar)
                 let repo = Repository(name: name, owner: owner, location: location)
                 
 //                print(repo.name)
@@ -49,7 +51,8 @@ extension Repository
         guard let name = json["login"] as? String else { fatalError("Can't get username")}
         let id = kEmptyString
         let location = kEmptyString
-        return Owner(name: name, reposUrl: id, location: location)
+        let avatar = kEmptyString
+        return Owner(name: name, reposUrl: id, location: location, image: avatar)
     }
     func description() -> String {
         return self.name
@@ -60,15 +63,40 @@ extension Owner {
     class func update(completion: (success: Bool, user: Owner) -> ()) {
         API.shared.enqueue(requestUser()) { (success, json) -> () in
             
-            let input = json[0]
-            print(input)
+            for object in json {
+                let name = object["login"] as? String ?? kEmptyString
+                let reposUrl = object["repos_url"] as? String ?? kEmptyString
+                let location = object["location"] as? String ?? kEmptyString
+                let image = object["avatar_url"] as? String ?? kEmptyString
+                
+                let owner = Owner(name: name, reposUrl: reposUrl, location: location, image: image)
+                
+                completion(success: true, user: owner)
+            }
             
-            let name = input["login"] as? String ?? kEmptyString
-            let reposUrl = input["repos_url"] as? String ?? kEmptyString
-            let location = input["location"] as? String ?? kEmptyString
-            let image = input["avatar_url"] as? String ?? kEmptyString
-            
-            let owner = Owner(name: name, reposUrl: reposUrl, location: location, image: image)
     }
 }
+    class func searchUsers(searchResult: String, completion: (success: Bool, users: [Owner]) -> ()) {
+        API.shared.enqueue(SearchUsers(searchResult: searchResult)) { (success, json) -> () in
+            
+            var owners = [Owner]()
+            
+            for object in json {
+                
+                let name = object["login"] as? String ?? kEmptyString
+                let reposUrl = object["repos_url"] as? String ?? kEmptyString
+                let location = object["location"] as? String ?? kEmptyString
+                let image = object["avatar_url"] as? String ?? kEmptyString
+                
+                let owner = Owner(name: name, reposUrl: reposUrl, location: location, image: image)
+                owners.append(owner)
+                
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                completion(success: true, users: owners)
+            })
+            
+        }
+    }
 }

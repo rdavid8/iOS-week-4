@@ -10,7 +10,7 @@ import UIKit
 
 class SearchViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate
 {
-    let allItems = ["","","",""]
+    let allItems = ["test","","",""]
     var searchItems = [String]()
     var isSearching = false
     

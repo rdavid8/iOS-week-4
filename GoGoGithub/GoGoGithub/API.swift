@@ -16,7 +16,7 @@ class API
     private init() {}
     
     let session = NSURLSession.sharedSession()
-
+    
     
     func enqueue(apiRequest: APIRequest, completion: APICompletionHandler)
     {
@@ -28,10 +28,16 @@ class API
                     do  {
                         if let json = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? [[String : AnyObject]] {
                             completion(success: true, json: json)
-//                            print(json)
                         }
                         if let json = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? [String : AnyObject] {
-//                            print(json)
+                            
+                            if let items = json["items"] as? [[String : AnyObject]]{
+                                completion(success: true, json: items)
+                            } else {
+                                completion(success: true, json: [json])
+                            }
+                            
+                            
                         }
                     } catch _ {}
                 }
@@ -48,7 +54,6 @@ class API
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 completion(image: image)
             })
-        
+        }
     }
-}
 }

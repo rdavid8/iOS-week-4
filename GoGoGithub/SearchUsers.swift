@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Search: APIRequest
+class SearchUsers: APIRequest
 {
     var httpMethod = HTTPMethod.GET
     var headerContentType = MIMEType.ApplicationJSON
@@ -16,12 +16,12 @@ class Search: APIRequest
     
     
     func url() -> String {
-        return "https://api.github.com/search/repositories"
+        return "https://api.github.com/search/users"
     }
     
     func queryStringParameters() -> [String : String]?
     {
-    return ["q" : searchResult]
+    return ["q" : self.searchResult]
         
     }
     
