@@ -17,6 +17,10 @@
 		3A65A6491C7F9C73008A5120 /* customCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65A6481C7F9C73008A5120 /* customCollectionViewLayout.swift */; };
 		3A65A64B1C7FA7BD008A5120 /* SearchUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65A64A1C7FA7BD008A5120 /* SearchUsers.swift */; };
 		3A65A64D1C7FDC8F008A5120 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65A64C1C7FDC8F008A5120 /* CollectionViewCell.swift */; };
+		3A65A64F1C7FE730008A5120 /* SearchedUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65A64E1C7FE730008A5120 /* SearchedUserProfileViewController.swift */; };
+		3A65A6511C7FE78A008A5120 /* CustomModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65A6501C7FE78A008A5120 /* CustomModalTransition.swift */; };
+		3A65A6531C800E70008A5120 /* FirstSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65A6521C800E70008A5120 /* FirstSearchViewController.swift */; };
+		3A65A6551C8023EF008A5120 /* WebKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65A6541C8023EF008A5120 /* WebKitViewController.swift */; };
 		AFC9C5471C7CE9E200CDF78F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C5461C7CE9E200CDF78F /* HomeViewController.swift */; };
 		AFC9C5491C7CEA0D00CDF78F /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C5481C7CEA0D00CDF78F /* Identity.swift */; };
 		AFC9C54F1C7CEF3000CDF78F /* GGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9C54E1C7CEF3000CDF78F /* GGButton.swift */; };
@@ -58,6 +62,10 @@
 		3A65A6481C7F9C73008A5120 /* customCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customCollectionViewLayout.swift; sourceTree = "<group>"; };
 		3A65A64A1C7FA7BD008A5120 /* SearchUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUsers.swift; sourceTree = "<group>"; };
 		3A65A64C1C7FDC8F008A5120 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		3A65A64E1C7FE730008A5120 /* SearchedUserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedUserProfileViewController.swift; sourceTree = "<group>"; };
+		3A65A6501C7FE78A008A5120 /* CustomModalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModalTransition.swift; sourceTree = "<group>"; };
+		3A65A6521C800E70008A5120 /* FirstSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstSearchViewController.swift; sourceTree = "<group>"; };
+		3A65A6541C8023EF008A5120 /* WebKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebKitViewController.swift; sourceTree = "<group>"; };
 		AFC9C5461C7CE9E200CDF78F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AFC9C5481C7CEA0D00CDF78F /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
 		AFC9C54E1C7CEF3000CDF78F /* GGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GGButton.swift; path = ../GGButton.swift; sourceTree = "<group>"; };
@@ -124,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				AFC9C55A1C7D110100CDF78F /* Repository.swift */,
+				3A65A6501C7FE78A008A5120 /* CustomModalTransition.swift */,
 				3A65A6401C7E891C008A5120 /* Search.swift */,
 				3A65A64A1C7FA7BD008A5120 /* SearchUsers.swift */,
 				3A65A6441C7EC72D008A5120 /* requestUser.swift */,
@@ -194,7 +203,10 @@
 			children = (
 				AFC9C5461C7CE9E200CDF78F /* HomeViewController.swift */,
 				AFFC2C4D1C7B9C40003ADE9B /* OAuthViewController.swift */,
+				3A65A64E1C7FE730008A5120 /* SearchedUserProfileViewController.swift */,
+				3A65A6521C800E70008A5120 /* FirstSearchViewController.swift */,
 				3A65A63C1C7E74DC008A5120 /* ProfileViewController.swift */,
+				3A65A6541C8023EF008A5120 /* WebKitViewController.swift */,
 				3A65A63A1C7E4F1C008A5120 /* SearchViewController.swift */,
 				3A65A6461C7F973B008A5120 /* CollectionViewController.swift */,
 				3A65A6421C7EC105008A5120 /* AddRepoController.swift */,
@@ -310,9 +322,12 @@
 				AFFC2C4E1C7B9C40003ADE9B /* OAuthViewController.swift in Sources */,
 				3A65A6491C7F9C73008A5120 /* customCollectionViewLayout.swift in Sources */,
 				AFC9C5571C7D04F200CDF78F /* Additions.swift in Sources */,
+				3A65A6531C800E70008A5120 /* FirstSearchViewController.swift in Sources */,
 				AFFC2C4C1C7B9C40003ADE9B /* AppDelegate.swift in Sources */,
 				3A65A63D1C7E74DC008A5120 /* ProfileViewController.swift in Sources */,
+				3A65A6551C8023EF008A5120 /* WebKitViewController.swift in Sources */,
 				AFC9C5551C7D039D00CDF78F /* GETRepositoriesRequest.swift in Sources */,
+				3A65A64F1C7FE730008A5120 /* SearchedUserProfileViewController.swift in Sources */,
 				3A65A63F1C7E75F5008A5120 /* POSTRepositoriesRequest.swift in Sources */,
 				3A65A6411C7E891C008A5120 /* Search.swift in Sources */,
 				AFC9C5491C7CEA0D00CDF78F /* Identity.swift in Sources */,
@@ -321,6 +336,7 @@
 				3A65A6431C7EC105008A5120 /* AddRepoController.swift in Sources */,
 				AFC9C5471C7CE9E200CDF78F /* HomeViewController.swift in Sources */,
 				AFC9C5511C7CF11C00CDF78F /* Setup.swift in Sources */,
+				3A65A6511C7FE78A008A5120 /* CustomModalTransition.swift in Sources */,
 				AFC9C5531C7CFC8C00CDF78F /* APIRequest.swift in Sources */,
 				AFC9C54F1C7CEF3000CDF78F /* GGButton.swift in Sources */,
 				3A65A6471C7F973B008A5120 /* CollectionViewController.swift in Sources */,

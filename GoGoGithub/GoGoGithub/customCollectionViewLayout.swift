@@ -27,7 +27,7 @@ class customCollectionViewLayout: UICollectionViewFlowLayout
     {
         self.minimumLineSpacing = self.spacing
         self.minimumInteritemSpacing = self.spacing
-        self.itemSize = CGSize(width: self.itemWidth() * 1.0, height: self.itemWidth() * 1.0)
+        self.itemSize = CGSize(width: self.itemWidth() * 0.5, height: self.itemWidth() * 0.5)
     }
     
     // HELPER FUNCTIONS

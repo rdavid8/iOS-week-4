@@ -8,11 +8,14 @@
 
 import UIKit
 
-class CollectionViewController: UIViewController, UICollectionViewDelegate, UISearchBarDelegate
+class CollectionViewController: UIViewController, UICollectionViewDelegate, UISearchBarDelegate, UIViewControllerTransitioningDelegate
 {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    let customTransition = CustomModalTransition(duration: 2.0)
+    var selectedItem: Owner?
     var datasource = [Owner]()
         {
         didSet {
@@ -38,6 +41,18 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UISe
         super.didReceiveMemoryWarning()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SearchedUserProfileViewController" {
+            guard let WebKitViewController = segue.destinationViewController as? SearchedUserProfileViewController else { return }
+            WebKitViewController.transitioningDelegate = self
+            WebKitViewController.owner = self.selectedItem
+        }
+        func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?
+        {
+            return self.customTransition
+        }
+    }
+    
     func searchBarSearchButtonClicked(searchBar: UISearchBar)
     {
         if let text = searchBar.text {
@@ -61,5 +76,10 @@ extension CollectionViewController: UICollectionViewDataSource
         return collectionCell
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        self.selectedItem = self.datasource[indexPath.row]
+        self.performSegueWithIdentifier("SearchedUserProfileViewController", sender: nil)
+    }
 }
+
 
